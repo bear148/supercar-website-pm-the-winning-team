@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    list-style: none;
+    flex-flow: row nowrap;
+}
+
+.flex * {
+    color: white;
+}
+
+.flex li img {
+    max-height: 77px;
+}
+
+.navbar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    justify-content: space-between;
+}
+
+.navbar li {
+    margin: 1rem;
+}
+
+.navbar li:last-of-type {
+    margin-top: 0;
+}
+
+.navbar li:first-of-type {
+    align-self: flex-end;
+}
+
+.navbar li:last-of-type img {
+    max-height: 75px;
+}
+
+#footer {
+    background-color: darkgray;
+}

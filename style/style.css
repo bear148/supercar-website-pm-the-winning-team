@@ -19,6 +19,80 @@ h6 {
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
     font-weight: lighter;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+#content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(/images/car-images/hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-content {
+    margin-left: 100px;
+}
+
+.hero-content a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    background-color: var(--orange);
+    padding: 15px 75px 15px 75px;
+}
+
+.slogan {
+    justify-content: space-between;
+    margin: 55px;
+}
+
+.slogan * {
+    width: fit-content;
+}
+
+.slogan h2,
+.hero-content h2 {
+    font-size: 76px;
+    font-weight: 300;
+}
+
+.slogan p {
+    font-size: 36px;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.showcase {
+    display: flex;
+    border-bottom: 1px solid var(--orange);
+    align-self: center;
+    max-width: 1752px;
+    width: 100%;
+}
+
+.showcase > div {
+    align-self: center;
+}
+
+.showcase h3 {
+    font-size: 36px;
+}
+
+.showcase-active {
+    border-bottom: 3px solid var(--orange);
+    padding-right: 125px;
+    padding-left: 25px;
 }
 
 .flex {
@@ -27,7 +101,7 @@ h6 {
     flex-flow: row nowrap;
 }
 
-.flex * {
+.flex {
     color: white;
 }
 
@@ -79,11 +153,36 @@ h6 {
 
 .socials {
     display: flex;
-    max-width: 200px;
+    max-width: 250px;
     justify-content: space-between;
     padding-bottom: 25px;
 }
 
 .socials img {
     width: 22px;
+}
+
+.nav-body {
+    background-color: black;
+    margin: 0;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}
+
+.nav-items {
+    display: flex;
+    padding: 1.35rem;
+    margin-left: 6rem;
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 64px;
+}
+
+.margin-r {
+    margin-right: 100px;
 }

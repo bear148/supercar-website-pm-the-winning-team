@@ -19,13 +19,24 @@ h6 {
     padding: 0;
     font-family: "Source Sans 3", sans-serif;
     font-weight: lighter;
-    box-sizing: border-box;
 }
 
 body {
+    animation: fadeInAnimation ease 2.25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     background-color: black;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 #content {
     display: flex;
     flex-flow: column;
@@ -55,6 +66,7 @@ body {
 .slogan {
     justify-content: space-between;
     margin: 55px;
+    max-width: 1752px;
 }
 
 .slogan * {
@@ -63,7 +75,7 @@ body {
 
 .slogan h2,
 .hero-content h2 {
-    font-size: 76px;
+    font-size: 75px;
     font-weight: 300;
 }
 
@@ -75,24 +87,87 @@ body {
 
 .showcase {
     display: flex;
-    border-bottom: 1px solid var(--orange);
     align-self: center;
     max-width: 1752px;
     width: 100%;
+    flex-flow: column;
 }
 
-.showcase > div {
+.showcase div:first-child {
     align-self: center;
+    width: 100%;
+    border-bottom: 1px solid var(--orange);
 }
 
 .showcase h3 {
     font-size: 36px;
 }
 
+.showcase-main {
+    width: 100%;
+    background-image: url(/images/car-images/showcase-orange.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    margin-top: 55px;
+}
+
+.showcase-main > a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    background-color: var(--orange);
+    padding: 15px 75px 15px 75px;
+    max-height: 34.4px;
+    align-self: flex-end;
+    margin-left: 55px;
+    margin-bottom: 55px;
+}
+
 .showcase-active {
     border-bottom: 3px solid var(--orange);
     padding-right: 125px;
     padding-left: 25px;
+}
+
+.cards {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    max-width: 1752px;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.row:first-child {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.row > section {
+    width: 48%;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+}
+
+.row > section > p {
+    color: white;
+    font-size: 20px;
+    padding-left: 38px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 75%;
+}
+
+.row > section > h3 {
+    margin-top: 30px;
+    color: white;
+    font-size: 36px;
+    padding-left: 50px;
 }
 
 .flex {
@@ -185,4 +260,26 @@ body {
 
 .margin-r {
     margin-right: 100px;
+}
+
+.resources {
+    height: 15vh;
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right:75px;
+}
+
+.resources > div {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 360px;
+    justify-content: space-between;
+}
+
+.resources > div > div > a:last-child {
+    text-decoration: none;
+    font-size: 38px;
+    color: var(--orange);
 }

@@ -37,6 +37,7 @@ body {
         opacity: 1;
     }
 }
+
 #content {
     display: flex;
     flex-flow: column;
@@ -53,6 +54,11 @@ body {
 
 .hero-content {
     margin-left: 100px;
+}
+
+.hero-content a,
+.showcase-main a {
+    font-weight: 400;
 }
 
 .hero-content a {
@@ -258,6 +264,10 @@ body {
     font-size: 64px;
 }
 
+.sub {
+    text-indent: 155px;
+}
+
 .margin-r {
     margin-right: 100px;
 }
@@ -282,4 +292,30 @@ body {
     text-decoration: none;
     font-size: 38px;
     color: var(--orange);
+}
+
+.car-one,
+.car-two,
+.car-three {
+    height:100vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.car-one {
+    background-image: url(/images/car-images/car-collection-1.png);
+    background-position: 25% 100%;
+}
+
+.car-two {
+    background-image: url(/images/car-images/car-collection-2-old.png);
+}
+
+.car-three {
+    background-image: url(/images/car-images/car-collection-3.png);
+}
+
+.transition {
+    background-image: url(/images/car-images/transition.png);
 }

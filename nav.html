@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trion</title>
     <link rel="stylesheet" href="/style/style.css">
+    <script src="/scripts/nav.js"></script>
 </head>
 <body class="nav-body">
     <header>
@@ -16,10 +17,24 @@
         </nav>
     </header>
     <main class="nav-content">
-        <a class="nav-items" href="nav-car.html">Car Collection</a>
-        <a class="nav-items">About Us</a>
-        <a class="nav-items" href="/pages/store/index.html">Merchandise</a>
-        <a class="nav-items">Contact Us</a>
+        <ul>
+            <li>
+                <a class="nav-items" href="nav-car.html">Car Collection</a>
+                <ul class="dropdown">
+                    <li><a class="nav-items sub" href="/car-page.html">Nemesis</a></li>
+                    <li><a class="nav-items sub">Black Widow</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-items">About Us</a></li>
+            <li>
+                <a class="nav-items" href="/pages/store/index.html">Merchandise</a>
+                <ul class="dropdown">
+                    <li><a class="nav-items sub" href="/pages/store/mens.html">Mens</a></li>
+                    <li><a class="nav-items sub">Womens</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-items">Contact Us</a></li>
+        </ul>
     </main>
     <div class="resources">
         <div>

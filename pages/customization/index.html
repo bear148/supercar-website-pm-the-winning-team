@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/style/style.css">
+        <script src="/js/car_customization.js"></script>
     </head>
     <body class="customization-body">
         <header class="omit">
@@ -24,16 +25,31 @@
                     <h3>Exterior</h3>
                 </div>
                 <div class="custom-items">
-                    <a>Floor Mats</a>
-                    <a>Accessories</a>
-                    <a href="/pages/customization/stitching.html">Stitching</a>
-                    <a>Seat Materials</a>
-                    <a>Speakers</a>
-                    <a>Seatbelt</a>
+                    <ul>
+                        <li><a>Floor Mats</a></li>
+                        <li><a>Accessories</a></li>
+                        <li>
+                            <a href="/pages/customization/stitching.html">Stitching</a>
+                            <ul class="dropdown">
+                                <div class="color-options">
+                                    <a class="pick" onclick="pick(this)"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                    <a class="color" href="/pages/customization/stitching.html"></a>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a>Seat Materials</a></li>
+                        <li><a>Speakers</a></li>
+                        <li><a>Seatbelt</a></li>
+                    </ul>
                 </div>
                 <a href="/pages/customization/confirm.html" class="confirm">CONFIRM</a>
             </aside>
         </main>
-        <script src="/scripts/car_customization.js"></script>
     </body>
 </html>

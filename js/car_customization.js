@@ -7,3 +7,7 @@ for (var i = 0; i < colors.length; i++) {
     color_options[i].style.background = random;
     console.log("Color");
 }
+
+function pick(el) {
+    el.classList.add("picked");
+}

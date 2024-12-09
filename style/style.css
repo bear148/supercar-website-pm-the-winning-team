@@ -487,21 +487,28 @@ body:not(.omit) {
     font-size: var(--customization-item);
 }
 
-.custom-items > a:first-child {
+.custom-items > ul > li:first-child {
     margin-top: 55px;
 }
 
-.custom-items > a:not(.active-option) {
+.custom-items > ul > li:not(.active-option) > a {
     margin-bottom: 25px;
     text-indent: 55px;
-    margin-left: 25px;
+    padding-left: 55px;
     background-image: url(/images/misc/arrow-down.svg);
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: left;
     background-size: 35px;
     text-decoration: none;
     color: white;
 }
+
+.custom-items > ul > li:not(.active-option) > a:hover {
+    background-image: url(/images/misc/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 35px;
+} 
 
 .options p {
     text-indent: 110px;
@@ -525,9 +532,14 @@ body:not(.omit) {
     text-decoration: none;
 }
 
+.picked {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px green;
+}
+
 .color:hover, .pick:hover {
     border-color: transparent;
-    box-shadow: 0 0 0 2px red;
+    box-shadow: 0 0 0 2px blue;
 }
 
 .omit {
@@ -580,14 +592,16 @@ body:not(.omit) {
     font-size: 36px;
 }
 
-.grid > a {
-    color: white;
-    text-decoration: none;
+.grid > div {
     font-size: 36px;
     height: 500px;
     width: 500px;
-    text-align: center;
     border: 1px solid var(--orange)
+}
+
+.grid > div > a { 
+    color: white;
+    text-decoration: none;
 }
 
 .grid {
@@ -597,4 +611,44 @@ body:not(.omit) {
     grid-template-columns: 500px 500px;
     column-gap: 55px;
     row-gap: 55px;
+}
+
+.dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+li:focus-within a {
+    outline: none;
+}
+
+.nav-content ul li:hover > ul,
+.nav-content ul li:focus-within > ul,
+.nav-content ul li ul:hover,
+.nav-content ul li ul:focus,
+.custom-items ul li:hover > ul,
+.custom-items ul li:focus-within > ul,
+.custom-items ul li ul:hover,
+.custom-items ul li ul:focus {
+    max-height: 400px;
+    opacity: 1;
+    display: block;
+    transition: all 0.5s;
+}
+
+.nav-content ul li ul li {
+    clear: both;
+    width: 30%;
+}
+
+.custom-items ul > li {
+    margin-left: 55px;
+}
+
+.custom-items * {
+    list-style: none;
+    color: white;
+    text-decoration: none;
 }

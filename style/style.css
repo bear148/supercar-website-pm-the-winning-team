@@ -26,6 +26,11 @@ h6 {
     font-weight: lighter;
 }
 
+img {
+    color: white;
+    font-size: 24px;
+}
+
 body:not(.omit) {
     animation: fadeInAnimation ease 1.78s;
     animation-iteration-count: 1;
@@ -593,6 +598,9 @@ body:not(.omit) {
 }
 
 .grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     font-size: 36px;
     height: 500px;
     width: 500px;
@@ -602,6 +610,9 @@ body:not(.omit) {
 .grid > div > a { 
     color: white;
     text-decoration: none;
+    height: 500px;
+    width: 500px;
+    text-align: center;
 }
 
 .grid {
@@ -640,7 +651,7 @@ li:focus-within a {
 
 .nav-content ul li ul li {
     clear: both;
-    width: 30%;
+    width: 100%;
 }
 
 .custom-items ul > li {
@@ -651,4 +662,27 @@ li:focus-within a {
     list-style: none;
     color: white;
     text-decoration: none;
+}
+
+.nav-content > ul {
+    width: 40%;
+}
+
+.product-main {
+    display: flex;
+}
+
+.product-main > img {
+    width: 750px;
+}
+
+.product-description h2 {
+    font-size: 72px;
+}
+
+.product-description p {
+    font-size: 24px;
+    color: white;
+    width: 50%;
+    text-indent: 55px;
 }

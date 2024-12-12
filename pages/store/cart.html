@@ -7,38 +7,38 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/style/style.css">
+        <script src="/js/product.js"></script>
     </head>
-    <body>
-        <div class="hero">
+    <body id="product-body">
+        <div>
             <header>
                 <nav>
-                    <ul class="flex navbar store-nav">
+                    <ul class="flex navbar">
                         <li><a href="/index.html"><img src="/images/logo.png" alt="Trion Logo"></a></li>
-                        <li>
-                            <a href="/pages/store/cart.html"><img src="/images/misc/cart.svg" alt="Shopping Cart"></a>
-                            <a href="/nav.html"><img src="/images/hamburger.svg"></a>
-                        </li>
+                        <li><a href="/nav.html"><img src="/images/hamburger.svg" alt="Hamburger Menu"></a></li>
                     </ul>
                 </nav>
             </header>
-            <div class="hero-content">
-                <h2>Mens</h2>
-            </div> 
         </div>
-        <main id="content">
-            <div class="grid">
-                <div>
-                    <a href="/pages/store/product.html">Baseball Cap</a>
+        <h1>Your Cart</h1>
+        <main class="cart-main">
+            <img src="/images/Merch/white-hat.webp" alt="White baseball cap with a trion logo on the front.">
+            <div class="product">
+                <div class="product-header">
+                    <h2>Baseball Cap</h2>
+                    <h3>$24.99</h3>
                 </div>
-                <div>
-                    <a href="/">Bucket Hat</a>
+                <div class="purchasing">
+                    <div class="quantity">
+                        <a onclick="add_item(this)"><img src="/images/misc/plus.svg" alt="Add an Item"></a>
+                        <p class="quantity">1</p>
+                        <a onclick="sub_item(this)"><img src="/images/misc/minus.svg" alt="Remove an Item"></a>
+                    </div>
                 </div>
-                <div>
-                    <a href="/">Trucker Cap</a>
-                </div>
-                <div>
-                    <a href="/">Fun Cap</a>
-                </div>
+            </div>
+            <div class="total">
+                <h2>Total: $24.99</h2>
+                <a>Checkout</a>
             </div>
         </main>
         <footer id="footer">

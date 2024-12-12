@@ -3,11 +3,13 @@ var random = colors[Math.floor(Math.random() * colors.length)];
 
 var color_options = document.getElementsByClassName('color');
 
-for (var i = 0; i < colors.length; i++) {
-    color_options[i].style.background = random;
-    console.log("Color");
+function pick(el) {
+    reset();
+    el.classList.add("picked");
 }
 
-function pick(el) {
-    el.classList.add("picked");
+function reset() {
+    for (var i = 0; i < color_options.length; i++) {
+        color_options[i].classList.remove("picked");
+    }
 }

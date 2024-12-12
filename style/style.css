@@ -90,13 +90,18 @@ a {
 .info a,
 .hero-content a,
 .confirm,
-.product > .purchasing > a {
+.product > .purchasing > a,
+.total > a {
     text-decoration: none;
     color: black;
     font-size: 24px;
     background-color: var(--orange);
     padding: 15px 75px 15px 75px;
     text-align: center;
+}
+
+.total > a {
+    min-width: 500px;
 }
 
 .product .purchasing {
@@ -241,6 +246,8 @@ a {
 .navbar {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
 }
 
 .navbar li {
@@ -254,11 +261,15 @@ a {
 }
 
 .navbar li:first-of-type {
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 .navbar li:last-of-type img {
     max-height: 75px;
+}
+
+.store-nav li:last-of-type > a:last-of-type {
+    margin-left: 55px;
 }
 
 #footer {
@@ -556,7 +567,7 @@ a {
     padding: 10px;
     column-gap: 50px;
     row-gap: 25px;
-    margin-left: 110px;
+    margin-left: 25px;
     align-self: center;
 }
 
@@ -564,13 +575,13 @@ a {
     width: 50px;
     height: 50px;
     border: 1px solid var(--orange);
-    background-color: aqua;
+    background-color: darkred;
     text-decoration: none;
 }
 
 .picked {
     border-color: transparent;
-    box-shadow: 0 0 0 2px green;
+    box-shadow: 0 0 0 4px green;
 }
 
 .color:hover, .pick:hover {
@@ -699,7 +710,17 @@ li:focus-within a {
     width: 40%;
 }
 
-.product-main {
+#product-body {
+    display: flex;
+    flex-flow: column;
+}
+
+#product-body > h1 {
+    font-size: 72px;
+    text-align: center;
+}
+
+.product-main, .cart-main {
     display: flex;
     margin-inline: auto;
     margin-left: auto;
@@ -707,10 +728,27 @@ li:focus-within a {
     max-width: 1920px;
 }
 
+.cart-main {
+    display: flex;
+    max-width: 1920px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}
+
+.cart-main > .total {
+    align-self:flex-end;
+    font-size: 36px;
+}
+
 .product {
     display: flex;
     flex-flow: column nowrap;
     align-self: center;
+}
+
+.cart-main > .product {
+    min-width: 500px;
 }
 
 .product-main > img {
@@ -737,6 +775,18 @@ li:focus-within a {
     color: white;
     width: 75%;
     text-indent: 55px;
+}
+
+.cart-main > img {
+    width: 500px;
+}
+
+.cart-main > .product > .product-header h2 {
+    font-size: 48px;
+}
+
+.cart-main > .product > .product-header h3 {
+    font-size: 36px;
 }
 
 .showcase-main > a:hover,
@@ -771,6 +821,10 @@ li:focus-within a {
     font-size: 24px;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+li:has(> a[href*="cart"]) {
+    align-self: flex-end;
 }
 
 @media only screen and (max-width: 768px) {
@@ -968,6 +1022,28 @@ li:focus-within a {
     .car-three {
         background-size: 100% 100%;
     }
+
+    .cart-main {
+        flex-flow: column nowrap;
+        margin-bottom: 55px;
+    }
+
+    .cart-main > .total {
+        align-self:flex-start;
+        font-size: 36px;
+        margin-top: 110px;
+    }
+
+    .cart-main > .product > .purchasing > .quantity {
+        margin-left: 7.5px;
+    }
+
+    #product-body > #footer {
+        position: relative;
+        padding-top: 25px;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -996,14 +1072,5 @@ li:focus-within a {
         margin-bottom: 55px;
     }
 }
-
-
-
-
-
-
-
-
-
 /* CART WEB APP 2024 */
 /* Made by Michael S. and Cristopher V. Jr */

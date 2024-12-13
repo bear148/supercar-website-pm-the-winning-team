@@ -159,9 +159,10 @@ a {
 
 .showcase-main {
     width: 100%;
-    background-image: url(/images/car-images/showcase-orange.png);
+    background-image: url(/images/car-images/showcase-orange.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
     height: 900px;
     margin-top: 55px;
 }
@@ -323,14 +324,14 @@ a {
 .nav-items {
     display: flex;
     padding: 1.35rem;
-    margin-left: 6rem;
+    margin-left: 3rem;
     color: var(--orange);
     text-decoration: none;
     font-size: 64px;
 }
 
 .sub {
-    text-indent: 155px;
+    text-indent: 100px;
 }
 
 .margin-r {
@@ -338,7 +339,7 @@ a {
 }
 
 .resources {
-    height: 15vh;
+    align-self: flex-end;
     flex-direction: row;
     display: flex;
     align-items: flex-end;
@@ -736,6 +737,7 @@ li:focus-within a {
 .cart-main > .total {
     align-self:flex-end;
     font-size: 36px;
+    margin-left: 110px;
 }
 
 .product {
@@ -890,6 +892,11 @@ a[href*="product"], a[href*="headwear"] {
         background-position: center;
     }
 
+    .hero-content {
+        text-align: center;
+        margin-left: 0;
+    }
+
     .slogan h2 {
         font-size: 32px;
         font-weight: 300;
@@ -979,7 +986,7 @@ a[href*="product"], a[href*="headwear"] {
     }
 
     .showcase-main {
-        background-image: url(/images/car-images/showcase-orange.png);
+        background-image: url(/images/car-images/showcase-orange.jpg);
         background-size: contain;
         height: 400px;
     }
@@ -1075,7 +1082,8 @@ a[href*="product"], a[href*="headwear"] {
 
     .car-two,
     .car-three {
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: center;
     }
 
     .cart-main {
@@ -1098,6 +1106,11 @@ a[href*="product"], a[href*="headwear"] {
         padding-top: 25px;
         bottom: 0;
         width: 100%;
+    }
+
+    .resources {
+        width: 70%;
+        align-self: center;
     }
 
     .resources > div {
@@ -1208,6 +1221,7 @@ a[href*="product"], a[href*="headwear"] {
         align-self: center;
         font-size: 36px;
         margin-top: 110px;
+        margin-left: 0;
     }
 
     .cart-main {
@@ -1220,7 +1234,7 @@ a[href*="product"], a[href*="headwear"] {
         flex-flow: column nowrap;
         justify-content: flex-end;
         align-items: flex-end;
-        background-image: url(/images/car-images/interior.png);
+        background-image: url(/images/car-images/interior.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: calc(100vh - 115px);
@@ -1264,11 +1278,6 @@ a[href*="product"], a[href*="headwear"] {
         margin-right: 15px;
     }
 
-    .showcase-main {
-        background-image: url(/images/car-images/showcase-orange.png);
-        background-size: contain;
-    }
-
     .showcase-main > a {
         text-decoration: none;
         color: black;
@@ -1279,6 +1288,32 @@ a[href*="product"], a[href*="headwear"] {
         align-self: flex-start;
         margin-left: 25px;
         margin-top: 25px;
+    }
+
+    .resources {
+        width: 70%;
+        align-self: center;
+    }
+
+    .nav-content > ul {
+        width: 100%;
+    }
+
+    .nav-items {
+        font-size: 42px;
+    }
+
+    .slogan h2 {
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+        margin-right: 15px;
+    }
+
+    .slogan p {
+        font-size: 24px;
+        text-align: center;
+        max-width: 1000px;
     }
 }
 /* CART WEB APP 2024 */

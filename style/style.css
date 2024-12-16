@@ -602,9 +602,9 @@ a {
 }
 
 .confirm {
-    margin-top: auto;
-    margin-bottom: 55px;
-    margin-right: 55px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
     align-self: flex-end;
 }
 

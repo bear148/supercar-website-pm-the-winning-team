@@ -270,18 +270,9 @@ a {
 }
 
 #footer {
-    position: relative;
     padding-top: 25px;
     background-image: linear-gradient(rgb(56, 56, 56, 1), rgb(32, 32, 32));
-    bottom: 0;
     width: 100%;
-}
-
-#product-body > #footer {
-    position: fixed;
-    padding-top: 25px;
-    bottom: 0;
-    width: 100%; 
 }
 
 #footer *:not(.socials img) {
@@ -327,7 +318,7 @@ a {
     margin-left: 3rem;
     color: var(--orange);
     text-decoration: none;
-    font-size: 64px;
+    font-size: 54px;
 }
 
 .sub {
@@ -486,7 +477,7 @@ a {
     flex-flow: column nowrap;
     border: solid 1px var(--orange);
     border-bottom: none;
-    width: 20vw;
+    width: 25vw;
     background-color: black;
     height: calc(100vh - 115px);
 }
@@ -546,6 +537,10 @@ a {
     text-decoration: none;
     color: white;
 }
+
+.cart-main > div > .product > .ea {
+    font-size: 26px;
+} 
 
 .custom-items > ul > li:not(.active-option) > a:hover {
     background-image: url(/images/misc/arrow-up.svg);
@@ -685,7 +680,7 @@ li:focus-within a {
     max-height: 400px;
     opacity: 1;
     display: block;
-    transition: all 0.5s;
+    transition: all 0.95s;
 }
 
 .nav-content ul li ul li {
@@ -723,6 +718,7 @@ li:focus-within a {
     justify-content: space-between;
     align-items: center;
     align-self: center;
+    margin-bottom: 55px;
 }
 
 .cart-main > div:first-of-type {
@@ -807,7 +803,8 @@ li:focus-within a {
 }
 
 .showcase-main > a:hover,
-.hero-content > a:hover {
+.hero-content > a:hover,
+.info a:hover {
     background-image: linear-gradient(45deg, var(--orange), var(--orangef));
 }
 
@@ -864,8 +861,17 @@ li:has(> a[href*="cart"]) {
     align-self: flex-end;
 }
 
+.lang {
+    margin-top: 55px;
+    flex-flow: row;
+}
+
+.lang ul {
+    width: 20%;
+}
+
 .lang > ul > li a {
-    font-size: 32px;
+    font-size: 48px;
     align-self: center;
 }
 
@@ -901,13 +907,19 @@ a[href*="product"], a[href*="headwear"] {
         font-size: 32px;
         font-weight: 300;
         text-align: center;
-        margin-right: 15px;
     }
 
     .slogan p {
         font-size: 24px;
         text-align: center;
         max-width: 1000px;
+        margin-top: 10px;
+    }
+
+    .slogan {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-items {
@@ -935,6 +947,7 @@ a[href*="product"], a[href*="headwear"] {
 
     .row:first-child {
         margin-bottom: 0;
+        margin-top: 0;
     }
 
     .half { 
@@ -942,6 +955,7 @@ a[href*="product"], a[href*="headwear"] {
         max-width: 100vw;
         width: 100vw;
         margin-bottom: 0;
+        height: 90vh;
     }
 
     .home-news, .home-store {
@@ -988,7 +1002,7 @@ a[href*="product"], a[href*="headwear"] {
     .showcase-main {
         background-image: url(/images/car-images/showcase-orange.jpg);
         background-size: contain;
-        height: 400px;
+        height: 300px;
     }
 
     .showcase-main > a {
@@ -1010,12 +1024,6 @@ a[href*="product"], a[href*="headwear"] {
         margin-left: auto;
         margin-right: auto;
         max-width: 1920px;
-    }
-    
-    .product {
-        display: flex;
-        flex-flow: column;
-        align-self: center;
     }
     
     .product-main > img {
@@ -1101,24 +1109,48 @@ a[href*="product"], a[href*="headwear"] {
         margin-left: 7.5px;
     }
 
-    #product-body > #footer {
-        position: relative;
-        padding-top: 25px;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .resources {
-        width: 70%;
-        align-self: center;
-    }
-
     .resources > div {
         width: 90%;
     }
 
     .cart-main > div:first-of-type {
         flex-flow: column;
+    }
+
+    .navbar li:last-of-type img {
+        max-height: 50px;
+    }
+
+    .flex li img {
+        max-height: 55px;
+    }
+
+    .showcase h3 {
+        font-size: 26px;
+    }
+
+    .showcase-main > a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        background-color: var(--orange);
+        padding: 10px 20px 10px 20px;
+        max-height: 34.4px;
+        align-self: flex-start;
+        margin-left: 25px;
+        margin-top: 25px;
+    }
+
+    .row > section > h3 {
+        font-size: 26px;
+    }
+
+    .row > section > p {
+        font-size: 18px;
+    }
+
+    .resources > div > div > a:last-child {
+        text-decoration: none;
     }
 }
 
@@ -1201,7 +1233,7 @@ a[href*="product"], a[href*="headwear"] {
     }
     
     .product-main > img {
-        width: 550px;
+        width: 500px;
         height: 100%;
     }
 
@@ -1281,10 +1313,7 @@ a[href*="product"], a[href*="headwear"] {
     .showcase-main > a {
         text-decoration: none;
         color: black;
-        font-size: 24px;
         background-color: var(--orange);
-        padding: 15px 75px 15px 75px;
-        max-height: 34.4px;
         align-self: flex-start;
         margin-left: 25px;
         margin-top: 25px;
@@ -1307,13 +1336,30 @@ a[href*="product"], a[href*="headwear"] {
         font-size: 32px;
         font-weight: 300;
         text-align: center;
-        margin-right: 15px;
     }
 
     .slogan p {
         font-size: 24px;
         text-align: center;
         max-width: 1000px;
+    }
+
+    .cart-main > div > .product > .ea {
+        font-size: 26px;
+        margin-left: 15px;
+    }
+
+    .resources > div {
+        width: 90%;
+    }
+    
+    .resources > div a img {
+        width: 36px;
+    }
+
+    .resources > div > div > a:last-child {
+        text-decoration: none;
+        font-size: 28px;
     }
 }
 /* CART WEB APP 2024 */

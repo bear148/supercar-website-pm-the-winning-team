@@ -71,7 +71,7 @@ a {
 
 .car-hero {
     height: 100vh;
-    background-image: url(/images/car-images/car-collection-1.png);
+    background-image: url(/images/car-images/car-collection-1.jpg);
     background-position: 25% 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -387,7 +387,7 @@ a {
 }
 
 .car-three {
-    background-image: url(/images/car-images/car-collection-3.png);
+    background-image: url(/images/car-images/car-collection-3.jpg);
 }
 
 .transition {
@@ -466,7 +466,7 @@ a {
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url(/images/car-images/interior.png);
+    background-image: url(/images/car-images/interior.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(100vh - 115px);
@@ -968,7 +968,7 @@ a[href*="product"], a[href*="headwear"] {
         flex-flow: column nowrap;
         justify-content: flex-end;
         align-items: flex-end;
-        background-image: url(/images/car-images/interior.png);
+        background-image: url(/images/car-images/interior.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height: calc(100vh - 115px);

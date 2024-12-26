@@ -4,7 +4,7 @@
     --orange: #FD6923;
     --orangef: #fa8a56;
     --dark-grey: #383838;
-    --h2: 75px;
+    --h2: 60px;
     --h3: 57px;
     --customization-h3: 48px;
     --customization-h2: 52px;
@@ -115,6 +115,7 @@ a {
 
 .slogan {
     justify-content: space-between;
+    align-items: center;
     margin: 55px;
     max-width: 1752px;
 }
@@ -131,6 +132,10 @@ a {
 .hero-content h2 {
     font-size: var(--h2);
     font-weight: 300;
+}
+
+.slogan h2 {
+    text-align: center;
 }
 
 .slogan p {
@@ -318,7 +323,7 @@ a {
     margin-left: 3rem;
     color: var(--orange);
     text-decoration: none;
-    font-size: 54px;
+    font-size: 48px;
 }
 
 .sub {
@@ -477,7 +482,7 @@ a {
     flex-flow: column nowrap;
     border: solid 1px var(--orange);
     border-bottom: none;
-    width: 25vw;
+    width: 30vw;
     background-color: black;
     height: calc(100vh - 115px);
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-    --orange: #FD6923;
+    --orange: #b93542;
     --orangef: #fa8a56;
     --dark-grey: #383838;
     --h2: 60px;
@@ -1157,6 +1157,20 @@ a[href*="product"], a[href*="headwear"] {
     .resources > div > div > a:last-child {
         text-decoration: none;
     }
+
+    #footer *:not(.socials img) {
+        margin-left: 100px;
+    }
+
+    .card-power,
+    .card-battery,
+    .card-cab,
+    .card-wire {
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 9%;
+        max-width: 90%;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -1198,7 +1212,7 @@ a[href*="product"], a[href*="headwear"] {
     }
     
     .product-description p {
-        font-size: 24px;
+        font-size: 20px;
         color: white;
         width: 100%;
         margin-left: 5px;
@@ -1230,11 +1244,11 @@ a[href*="product"], a[href*="headwear"] {
         flex-flow: column;
     }
     .product-header h2 {
-        font-size: 54px;
+        font-size: 48px;
     }
     
     .product-header h3 {
-        font-size: 48px;
+        font-size: 42px;
     }
     
     .product-main > img {

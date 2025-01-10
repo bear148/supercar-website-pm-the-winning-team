@@ -910,6 +910,7 @@ a[href*="product"], a[href*="headwear"] {
     background-image: url(/images/misc/white-tee.png);
 }
 
+<<<<<<< Updated upstream
 .contact-form {
     width: 1000px;
     height: 600px;
@@ -952,6 +953,21 @@ a[href*="product"], a[href*="headwear"] {
     border: 1px solid var(--orange);
     background-color: rgba(255, 255, 255, 0.2);
     resize: none;
+=======
+.aboutus {
+    font-size: var(--page-main);
+    color: var(--orange);
+    display: flex;
+    justify-content: center;
+}
+
+.aboutustittle {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    font-size: 48px;
+    color: var(--orange);
+>>>>>>> Stashed changes
 }
 
 @media only screen and (max-width: 768px) {

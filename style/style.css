@@ -6,6 +6,7 @@
     --dark-grey: #383838;
     --h2: 60px;
     --h3: 57px;
+    --page-main: 64px;
     --text-color: #ffffff;
     --customization-h3: 48px;
     --customization-h2: 52px;
@@ -63,6 +64,15 @@ a {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+}
+
+.contact > h1 {
+    font-size: var(--page-main);
+}
+
+header {
+    width: 100%;
 }
 
 .hero {
@@ -898,6 +908,50 @@ a[href*="product"], a[href*="headwear"] {
 
 .store-men {
     background-image: url(/images/misc/white-tee.png);
+}
+
+.contact-form {
+    width: 1000px;
+    height: 600px;
+}
+
+.contacter {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.contacter > input::placeholder {
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-form > textarea::placeholder {
+    font-size: 24px;
+}
+
+.contacter > input:first-of-type {
+    margin-right: 25px;
+}
+
+.contacter > input {
+    height: 60px;
+    width: 50%;
+}
+
+.contact-form > textarea {
+    max-width: 1000px;
+    width: calc(100% - 2px);
+    margin-top: 25px;
+    height: 400px;
+}
+
+.contact-form > textarea,
+.contacter > input {
+    border: 1px solid var(--orange);
+    background-color: rgba(255, 255, 255, 0.2);
+    resize: none;
 }
 
 @media only screen and (max-width: 768px) {

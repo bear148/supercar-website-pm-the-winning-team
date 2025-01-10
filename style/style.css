@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-    --orange: #b93542;
+    --orange: #FD6923;
     --orangef: #fa8a56;
     --dark-grey: #383838;
     --h2: 60px;
     --h3: 57px;
+    --text-color: #ffffff;
     --customization-h3: 48px;
     --customization-h2: 52px;
     --customization-item: 40px;
+
+    --button: 15px 75px 15px 75px;
 }
 
 h1,
@@ -28,7 +31,7 @@ h6 {
 }
 
 img {
-    color: white;
+    color: var(--text-color);;
     font-size: 24px;
 }
 
@@ -67,6 +70,7 @@ a {
     background-image: url(/images/car-images/hero-img.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .car-hero {
@@ -96,7 +100,7 @@ a {
     color: black;
     font-size: 24px;
     background-color: var(--orange);
-    padding: 15px 75px 15px 75px;
+    padding: var(--button);
     text-align: center;
 }
 
@@ -177,7 +181,7 @@ a {
     color: black;
     font-size: 24px;
     background-color: var(--orange);
-    padding: 15px 75px 15px 75px;
+    padding: var(--button);
     max-height: 34.4px;
     align-self: flex-end;
     margin-left: 55px;
@@ -216,7 +220,7 @@ a {
 }
 
 .row > section > p {
-    color: white;
+    color: var(--text-color);;
     font-size: 20px;
     padding-left: 38px;
     margin-top: 30px;
@@ -226,7 +230,7 @@ a {
 
 .row > section > h3 {
     margin-top: 30px;
-    color: white;
+    color: var(--text-color);;
     font-size: 36px;
     padding-left: 50px;
 }
@@ -238,7 +242,7 @@ a {
 }
 
 .flex {
-    color: white;
+    color: var(--text-color);;
 }
 
 .flex li img {
@@ -280,7 +284,7 @@ a {
     width: 100%;
 }
 
-#footer *:not(.socials img) {
+#footer *:not(.socials img, a) {
     margin-left: 100px;
 }
 
@@ -288,10 +292,11 @@ a {
     font-size: 3.5rem;
 }
 
-#footer p {
-    color: white;
+#footer p, #footer a {
+    color: var(--text-color);
     font-size: 1.25rem;
     margin-bottom: 23px;
+    text-decoration: none;
 }
 
 .socials {
@@ -308,6 +313,7 @@ a {
 .nav-body {
     background-color: black;
     margin: 0;
+    height: 100vh;
 }
 
 .nav-content {
@@ -382,7 +388,7 @@ a {
 
 .info p {
     font-size: 36px;
-    color: white;
+    color: var(--text-color);;
 }
 
 /* THE BACKGROUND FOR car-one (div) is found in the .car-hero class*/
@@ -490,7 +496,7 @@ a {
 #customization-root h3 {
     font-size: var(--customization-h3);
     width: 50%;
-    color: white;
+    color: var(--text-color);;
 }
 
 .custom-nav {
@@ -523,7 +529,7 @@ a {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
-    color: white;
+    color: var(--text-color);;
     font-size: var(--customization-item);
 }
 
@@ -540,7 +546,7 @@ a {
     background-position: left;
     background-size: 35px;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);;
 }
 
 .cart-main > div > .product > .ea {
@@ -599,7 +605,7 @@ a {
     background-position: center left;
     background-size: 35px;
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
 }
 
 .pick {
@@ -614,14 +620,14 @@ a {
 }
 
 #customization-root > aside > h4 {
-    color: white;
-    font-size: 48px;
+    color: var(--text-color);
+    font-size: var(--customization-h2);
     align-self: center;
 }
 
 .order-summary > h5 {
-    color: white;
-    font-size: 40px;
+    color: var(--text-color);
+    font-size: var(--customization-h2);
     text-align: center;
     margin-bottom: 55px;
 }
@@ -632,7 +638,7 @@ a {
 }
 
 .order-summary > ul > li > p {
-    color: white;
+    color: var(--text-color);
     font-size: 36px;
 }
 
@@ -647,7 +653,7 @@ a {
 }
 
 .grid > div > a { 
-    color: white;
+    color: var(--text-color);;
     text-decoration: none;
     height: 500px;
     width: 500px;
@@ -699,7 +705,7 @@ li:focus-within a {
 
 .custom-items * {
     list-style: none;
-    color: white;
+    color: var(--text-color);;
     text-decoration: none;
 }
 
@@ -790,7 +796,7 @@ li:focus-within a {
 
 .product-description p {
     font-size: 24px;
-    color: white;
+    color: var(--text-color);;
     width: 75%;
     text-indent: 55px;
 }
@@ -843,7 +849,7 @@ li:focus-within a {
 .quantity {
     align-self: flex-end;
     display: flex;
-    color: white;
+    color: var(--text-color);;
     align-items: center;
     justify-content: flex-end;
 }
@@ -895,6 +901,27 @@ a[href*="product"], a[href*="headwear"] {
 }
 
 @media only screen and (max-width: 768px) {
+    :root {
+        --h2: 48px;
+        --h3: 42px;
+        --customization-h3: 36px;
+        --customization-h2: 48px;
+        --customization-item: 24px;
+        --button: 7.5px 37.5px 7.5px 37.5px;
+    }
+
+    #footer h1 {
+        font-size: 2.75rem;
+    }
+
+    #footer *:not(.socials img, a) {
+        margin-left: 50px;
+    }
+
+    .socials img {
+        width: 18px;
+    }
+
     .hero {
         height: 80vh;
         background-image: url(/images/car-images/hero-img.png);
@@ -991,7 +1018,7 @@ a[href*="product"], a[href*="headwear"] {
     }
 
     .order-summary > h5 {
-        color: white;
+        color: var(--text-color);;
         font-size: 40px;
         text-align: center;
         margin-bottom: calc(55px / 2);
@@ -1007,7 +1034,8 @@ a[href*="product"], a[href*="headwear"] {
     .showcase-main {
         background-image: url(/images/car-images/showcase-orange.jpg);
         background-size: contain;
-        height: 300px;
+        width: 100%;
+        height: 50%;
     }
 
     .showcase-main > a {
@@ -1015,7 +1043,7 @@ a[href*="product"], a[href*="headwear"] {
         color: black;
         font-size: 24px;
         background-color: var(--orange);
-        padding: 15px 75px 15px 75px;
+        padding: var(--button);
         max-height: 34.4px;
         align-self: flex-end;
         margin-left: 25px;
@@ -1055,7 +1083,7 @@ a[href*="product"], a[href*="headwear"] {
     
     .product-description p {
         font-size: 24px;
-        color: white;
+        color: var(--text-color);;
         width: 100%;
         margin-left: 5px;
         margin-right: 5px;
@@ -1158,10 +1186,6 @@ a[href*="product"], a[href*="headwear"] {
         text-decoration: none;
     }
 
-    #footer *:not(.socials img) {
-        margin-left: 100px;
-    }
-
     .card-power,
     .card-battery,
     .card-cab,
@@ -1213,7 +1237,7 @@ a[href*="product"], a[href*="headwear"] {
     
     .product-description p {
         font-size: 20px;
-        color: white;
+        color: var(--text-color);;
         width: 100%;
         margin-left: 5px;
         margin-right: 5px;
@@ -1303,10 +1327,7 @@ a[href*="product"], a[href*="headwear"] {
     }
 
     .order-summary > h5 {
-        color: white;
         font-size: 40px;
-        text-align: center;
-        margin-bottom: calc(55px / 2);
     }
 
     .grid {
@@ -1319,7 +1340,7 @@ a[href*="product"], a[href*="headwear"] {
     .quantity {
         align-self: flex-start;
         display: flex;
-        color: white;
+        color: var(--text-color);;
         align-items: center;
         justify-content: flex-end;
     }
@@ -1379,6 +1400,80 @@ a[href*="product"], a[href*="headwear"] {
     .resources > div > div > a:last-child {
         text-decoration: none;
         font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    :root {
+        --h2: 48px;
+        --h3: 42px;
+        --customization-h3: 36px;
+        --customization-h2: 48px;
+        --customization-item: 24px;
+    }
+
+    .nav-items {
+        font-size: 36px;
+    }
+
+    .resources {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .resources > div {
+        width: 100%;
+    }
+
+    .showcase h3 {
+        font-size: 26px;
+    }
+
+    .margin-r.showcase-active {
+        margin-right: 0;
+        padding-right: 75px;
+        padding-left: 15px;
+    }
+
+    .showcase div:first-child > h3:last-of-type {
+        margin-left: 15px;
+    }
+
+    .row > section > p {
+        margin-top: 10px;
+    }
+    
+    .row > section {
+        margin-bottom: 25px;
+    }
+
+    .showcase-main {
+        margin-top: 10px;
+        height: 225px;
+    }
+
+    .row > section > h3 {
+        padding-left:19px;
+    }
+
+    .store-nav li:last-of-type > a:last-of-type {
+        margin-left: 27.5px;
+    }
+
+    .row > section > p {
+        padding-left: 19px;
+    }
+
+    .custom-items > ul > li:not(.active-option) > a {
+        margin-bottom: 25px;
+        text-indent: 55px;
+        padding-left: 27.5px;
+        background-image: url(/images/misc/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 20px;
+        text-decoration: none;
+        color: var(--text-color);
     }
 }
 /* CART WEB APP 2024 */

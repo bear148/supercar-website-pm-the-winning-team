@@ -13,6 +13,7 @@
     --customization-item: 40px;
 
     --button: 15px 75px 15px 75px;
+    --buttonf: 24px
 }
 
 h1,
@@ -105,13 +106,15 @@ header {
 .hero-content a,
 .confirm,
 .product > .purchasing > a,
-.total > a {
+.total > a,
+input[type="submit"] {
     text-decoration: none;
     color: black;
     font-size: 24px;
     background-color: var(--orange);
     padding: var(--button);
     text-align: center;
+    border: none;
 }
 
 .product .purchasing {
@@ -929,6 +932,15 @@ a[href*="product"], a[href*="headwear"] {
 
 .contact-form > textarea::placeholder {
     font-size: 24px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 19px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
 }
 
 .contacter > input:first-of-type {

@@ -4,6 +4,7 @@
     --orange: #FD6923;
     --orangef: #fa8a56;
     --dark-grey: #383838;
+    --dd-grey: #2d2d2d;
     --h2: 60px;
     --h3: 57px;
     --page-main: 64px;
@@ -13,7 +14,9 @@
     --customization-item: 40px;
 
     --button: 15px 75px 15px 75px;
-    --buttonf: 24px
+    --buttonf: 24px;
+    --standard-intext-margin: 25px;
+    --standard-seperate-margin: 55px;
 }
 
 h1,
@@ -137,7 +140,18 @@ input[type="submit"] {
     max-width: 1752px;
 }
 
-.slogan * {
+.slogan-aboutus > .flex {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+
+.slogan *,
+.slogan-aboutus * {
     width: fit-content;
 }
 
@@ -146,11 +160,13 @@ input[type="submit"] {
 }
 
 .slogan h2,
+.slogan-aboutus h2,
 .hero-content h2 {
     font-size: var(--h2);
     font-weight: 300;
 }
 
+.slogan-aboutus h2,
 .slogan h2 {
     text-align: center;
 }
@@ -159,6 +175,32 @@ input[type="submit"] {
     font-size: 36px;
     text-align: center;
     max-width: 1000px;
+}
+
+.slogan-aboutus h2 {
+    margin-right: 55px;
+}
+
+.slogan-aboutus p {
+    text-indent: 55px;
+    font-size: 24px;
+    max-width: 1200px;
+}
+
+.slogan-aboutus {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark-grey);
+    margin-top: 125px;
+}
+
+.slogan-aboutus > img {
+    margin-top: var(--standard-seperate-margin);
+    margin-bottom: var(--standard-seperate-margin);
+    width: 5%;
 }
 
 .showcase {
@@ -583,7 +625,7 @@ input[type="submit"] {
     padding: 10px;
     column-gap: 50px;
     row-gap: 25px;
-    margin-left: 25px;
+    margin-left: var(--standard-intext-margin);
     align-self: center;
 }
 
@@ -612,7 +654,7 @@ input[type="submit"] {
 .active-option {
     margin-bottom: 25px;
     text-indent: 55px;
-    margin-left: 25px;
+    margin-left: var(--standard-intext-margin);
     background-image: url(/images/misc/arrow-left.svg);
     background-repeat: no-repeat;
     background-position: center left;
@@ -976,9 +1018,49 @@ input[type="submit"]:hover {
 .aboutustittle {
     display: flex;
     justify-content: center;
-    padding-top: 2%;
-    font-size: 48px;
+    font-size: var(--h3);
     color: var(--orange);
+}
+
+.ceo {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--dd-grey);
+    width: 100vw;
+}
+
+.ceo img {
+    width: 50%;
+    margin-right: 25px;
+}
+
+.ceo h3 {
+    font-size: var(--h3);
+    padding-top: 55px;
+}
+
+.ceo-info {
+    color: white;
+    font-size: 24px;
+}
+
+.ceo-info > p {
+    width: 98%;
+}
+
+.staff {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.staff h3 {
+    font-size: var(--h3);
+}
+
+.staff-grid {
+    display: grid;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1127,7 +1209,7 @@ input[type="submit"]:hover {
         padding: var(--button);
         max-height: 34.4px;
         align-self: flex-end;
-        margin-left: 25px;
+        margin-left: var(--standard-intext-margin);
         margin-bottom: 0;
     }
 
@@ -1251,7 +1333,7 @@ input[type="submit"]:hover {
         padding: 10px 20px 10px 20px;
         max-height: 34.4px;
         align-self: flex-start;
-        margin-left: 25px;
+        margin-left: var(--standard-intext-margin);
         margin-top: 25px;
     }
 
@@ -1276,9 +1358,34 @@ input[type="submit"]:hover {
         background-size: 9%;
         max-width: 90%;
     }
+
+    .ceo {
+        flex-flow: column nowrap;
+    }
+    
+    .ceo img {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .ceo h3 {
+        font-size: var(--h3);
+    }
+    
+    .ceo-info {
+        font-size: 20px;
+    }
+    
+    .ceo-info > p {
+        width: 96%;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
+    :root {
+        --h2: 48px;
+    }
+
     .product-main {
         display: flex;
         flex-flow: column nowrap;
@@ -1436,7 +1543,7 @@ input[type="submit"]:hover {
         color: black;
         background-color: var(--orange);
         align-self: flex-start;
-        margin-left: 25px;
+        margin-left: var(--standard-intext-margin);
         margin-top: 25px;
     }
 
@@ -1460,9 +1567,8 @@ input[type="submit"]:hover {
     }
 
     .slogan p {
-        font-size: 24px;
+        font-size: 18px;
         text-align: center;
-        max-width: 1000px;
     }
 
     .cart-main > div > .product > .ea {
@@ -1481,6 +1587,43 @@ input[type="submit"]:hover {
     .resources > div > div > a:last-child {
         text-decoration: none;
         font-size: 28px;
+    }
+
+    .ceo {
+        flex-flow: column nowrap;
+    }
+    
+    .ceo img {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .ceo h3 {
+        font-size: var(--h3);
+    }
+    
+    .ceo-info {
+        font-size: 20px;
+        margin-left: 5px;
+        padding-bottom: var(--standard-seperate-margin);
+    }
+    
+    .ceo-info > p {
+        width: 96%;
+    }
+
+    .slogan-aboutus > .flex {
+        flex-flow: column nowrap;
+    }
+
+    .slogan-aboutus h2 {
+        margin-right: 0;
+    }
+
+    .slogan-aboutus > img {
+        margin-top: var(--standard-seperate-margin);
+        margin-bottom: var(--standard-seperate-margin);
+        width: 13%;
     }
 }
 
@@ -1555,6 +1698,10 @@ input[type="submit"]:hover {
         background-size: 20px;
         text-decoration: none;
         color: var(--text-color);
+    }
+
+    .customization-body {
+        overflow-y: visible;
     }
 }
 /* CART WEB APP 2024 */

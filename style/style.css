@@ -17,6 +17,7 @@
     --buttonf: 24px;
     --standard-intext-margin: 25px;
     --standard-seperate-margin: 55px;
+    --jtitle: 42px;
 }
 
 h1,
@@ -967,6 +968,12 @@ a[href*="product"], a[href*="headwear"] {
     align-content: space-between;
 }
 
+.contact-form > textarea,
+.contacter > input {
+    font-size: 24px;
+    color: white;
+}
+
 .contacter > input::placeholder {
     font-size: 24px;
     text-align: center;
@@ -1045,7 +1052,7 @@ input[type="submit"]:hover {
 }
 
 .ceo-info > p {
-    width: 98%;
+    width: 97%;
 }
 
 .staff {
@@ -1053,6 +1060,8 @@ input[type="submit"]:hover {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-top: var(--standard-seperate-margin);
+    margin-bottom: var(--standard-seperate-margin);
 }
 
 .staff h3 {
@@ -1061,6 +1070,31 @@ input[type="submit"]:hover {
 
 .staff-grid {
     display: grid;
+    grid-template-columns: 400px 400px 400px 400px;
+    grid-template-rows: 2;
+    align-items: center;
+    row-gap: var(--standard-seperate-margin);
+    column-gap: var(--standard-intext-margin);
+    margin-top: var(--standard-seperate-margin);
+}
+
+.staff-member {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.staff-member > img {
+    width: 90%;
+    align-self: center;
+}
+
+.staff-member > h3 {
+    font-size: var(--jtitle);
+}
+
+.staff-member > h4 {
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1384,6 +1418,11 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 1280px) {
     :root {
         --h2: 48px;
+    }
+
+    .staff-grid {
+        grid-template-columns: 100%;
+        grid-template-rows: 8;
     }
 
     .product-main {

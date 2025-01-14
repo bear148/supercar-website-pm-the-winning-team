@@ -111,7 +111,7 @@ header {
 .confirm,
 .product > .purchasing > a,
 .total > a,
-input[type="submit"] {
+button {
     text-decoration: none;
     color: black;
     font-size: 24px;
@@ -984,11 +984,10 @@ a[href*="product"], a[href*="headwear"] {
     padding: 10px;
 }
 
-input[type="submit"] {
+button {
     margin-top: 19px;
 }
-
-input[type="submit"]:hover {
+button:hover {
     cursor: pointer;
 }
 
@@ -1094,7 +1093,7 @@ input[type="submit"]:hover {
 }
 
 .staff-member > h4 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 768px) {

@@ -13,8 +13,8 @@
     --customization-h2: 52px;
     --customization-item: 40px;
 
-    --button: 15px 75px 15px 75px;
-    --buttonf: 24px;
+    --button: 12px 72px 12px 72px;
+    --buttonf: 20px;
     --standard-intext-margin: 25px;
     --standard-seperate-margin: 55px;
     --jtitle: 42px;
@@ -98,6 +98,11 @@ header {
 
 .hero-content {
     margin-left: 100px;
+    width: fit-content;
+}
+
+.hero-content a {
+    max-width: 132px;
 }
 
 .hero-content a,
@@ -164,7 +169,7 @@ button {
 .slogan-aboutus h2,
 .hero-content h2 {
     font-size: var(--h2);
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .slogan-aboutus h2,
@@ -578,6 +583,10 @@ button {
 
 .active {
     border-bottom: none;
+}
+
+.custom-items {
+    overflow-y: scroll;
 }
 
 .custom-items, .options {
